@@ -29,10 +29,10 @@ export const AppBar: FC = (props) => {
 
   return (
     <div>
-      <header id="navbar-sticky" class="navbar">
-        <div class="container">
+      <header id="navbar-sticky" classname="navbar">
+        <div classname="container">
           <nav>
-            <a href="/" class="logo">
+            <a href="/" classname="logo">
               <img
                 src="assets/images/logo1.png"
                 class="h-10"
@@ -40,7 +40,7 @@ export const AppBar: FC = (props) => {
               />
             </a>
 
-            <div class="ms-auto flex items-center px-2.5 lg:hidden">
+            <div classname="ms-auto flex items-center px-2.5 lg:hidden">
               <button
                 class="hs-collapse-toggle bg-default-100/5 inline-flex h-9 w-12 items-center justify-center rounded-md border border-white/20"
                 type="button"
