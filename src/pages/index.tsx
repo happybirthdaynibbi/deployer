@@ -3,10 +3,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { HomeView, ToolView, FeatureView, OfferView, FaqView, CreateView, ToeknMetadata, ContactView, AirdropView, DonateView } from "../views";
 
-interface HomeProps {
-  setOpenCreateModal: (value: boolean) => void;
-}
-
 const Home: NextPage = () => {
   const [openCreateModal, setOpenCreateModal] = useState(false);
   const [openTokenMetaData, setOpenTokenMetaData] = useState(false);
@@ -20,7 +16,7 @@ const Home: NextPage = () => {
         <title>SolDeployerAI</title>
         <meta name="description" content="SolDeployerAI" />
       </Head>
-      <HomeView setOpenCreateModal={setOpenCreateModal} />
+      <HomeView />
       <ToolView
         setOpenCreateModal={setOpenCreateModal}
         setOpenTokenMetaData={setOpenTokenMetaData}
@@ -28,13 +24,7 @@ const Home: NextPage = () => {
         setOpenAirdrop={setOpenAirdrop}
         setOpenSendTransaction={setOpenSendTransaction}
       />
-      <FeatureView
-        setOpenCreateModal={setOpenCreateModal}
-        setOpenTokenMetaData={setOpenTokenMetaData}
-        setOpenContact={setOpenContact}
-        setOpenAirdrop={setOpenAirdrop}
-        setOpenSendTransaction={setOpenSendTransaction}
-      />
+      <FeatureView />
       <OfferView />
       <FaqView />
       {/* // */}
