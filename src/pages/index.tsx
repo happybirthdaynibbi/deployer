@@ -1,25 +1,19 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import {
-  HomeView,
-  ToolView,
-  FeatureView,
-  OfferView,
-  FaqView,
-  CreateView,
-  ToeknMetadata,
-  ContactView,
-  AirdropView,
-  DonateView,
-} from "../views";
+import { HomeView, ToolView, FeatureView, OfferView, FaqView, CreateView, ToeknMetadata, ContactView, AirdropView, DonateView } from "../views";
 
-const Home: NextPage = (props) => {
+interface HomeProps {
+  setOpenCreateModal: (value: boolean) => void;
+}
+
+const Home: NextPage = () => {
   const [openCreateModal, setOpenCreateModal] = useState(false);
   const [openTokenMetaData, setOpenTokenMetaData] = useState(false);
   const [openContact, setOpenContact] = useState(false);
   const [openAirdrop, setOpenAirdrop] = useState(false);
   const [openSendTransaction, setOpenSendTransaction] = useState(false);
+
   return (
     <>
       <Head>
