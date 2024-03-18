@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { HomeView, ToolView, FeatureView, OfferView, FaqView, CreateView, ToeknMetadata, ContactView, AirdropView, DonateView } from "../views";
+import { HomeView, ToolView, FeatureView, OfferView, FaqView, CreateView, TokenMetadata, ContactView, AirdropView, DonateView } from "../views";
 
 const Home: NextPage = () => {
   const [openCreateModal, setOpenCreateModal] = useState(false);
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
       {openTokenMetaData && (
         <div className="relative h-full new_loader bg-slate-900">
-          <ToeknMetadata setOpenTokenMetaData={setOpenTokenMetaData} />
+          <TokenMetadata setOpenTokenMetaData={setOpenTokenMetaData} />
         </div>
       )}
 
