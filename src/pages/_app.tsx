@@ -3,7 +3,7 @@ import Head from "next/head";
 import { FC } from "react";
 import { ContextProvider } from "../contexts/ContextProvider";
 import { AppBar } from "../components/AppBar";
-import { ContentContainer } from "../components/ContentContainer";
+import ContentContainer from "../components/ContentContainer"; // Importing ContentContainer component
 import { Footer } from "../components/Footer";
 import Notifications from "../components/Notification";
 
@@ -12,7 +12,7 @@ require("../styles/globals.css");
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <div class="bg-default-900">
+    <div className="bg-default-900"> {/* Changed class to className */}
       <Head>
         <title>SolDeployerAI</title>
       </Head>
@@ -20,10 +20,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       <ContextProvider>
         <Notifications />
         <AppBar />
-        <Component {...pageProps} />
+        <ContentContainer> {/* Using ContentContainer component */}
+          <Component {...pageProps} />
+        </ContentContainer>
         <Footer />
       </ContextProvider>
 
+      {/* Your script imports */}
       <script src="assets/libs/preline/preline.js"></script>
       <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
       <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
