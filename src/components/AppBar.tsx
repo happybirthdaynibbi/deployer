@@ -29,26 +29,26 @@ export const AppBar: FC = (props) => {
 
   return (
     <div>
-      <header id="navbar-sticky" className="navbar">
-        <div className="container">
+      <header id="navbar-sticky" className="navbar"> {/* Changed classname to className */}
+        <div className="container"> {/* Changed classname to className */}
           <nav>
-            <a href="/" className="logo">
+            <a href="/" className="logo"> {/* Changed classname to className */}
               <img
                 src="assets/images/logo1.png"
-                className="h-10"
+                className="h-10" {/* Changed class to className */}
                 alt="WebAi Logo"
               />
             </a>
 
-            <div className="ms-auto flex items-center px-2.5 lg:hidden">
+            <div className="ms-auto flex items-center px-2.5 lg:hidden"> {/* Changed classname to className */}
               <button
-                className="hs-collapse-toggle bg-default-100/5 inline-flex h-9 w-12 items-center justify-center rounded-md border border-white/20"
+                className="hs-collapse-toggle bg-default-100/5 inline-flex h-9 w-12 items-center justify-center rounded-md border border-white/20" {/* Changed class to className */}
                 type="button"
                 id="hs-unstyled-collapse"
                 data-hs-collapse="#mobileMenu"
                 data-hs-type="collapse"
               >
-                <i data-lucide="menu" className=" stroke-white">
+                <i data-lucide="menu" className="stroke-white"> {/* Changed class to className */}
                   <LuMenu />
                 </i>
               </button>
@@ -56,12 +56,12 @@ export const AppBar: FC = (props) => {
 
             <div
               id="mobileMenu"
-              className="hs-collapse mx-auto mt-2 hidden grow basis-full items-center justify-center transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto"
+              className="hs-collapse mx-auto mt-2 hidden grow basis-full items-center justify-center transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto" {/* Changed classname to className */}
             >
-              <ul id="navbar-navlist" className="navbar-nav">
+              <ul id="navbar-navlist" className="navbar-nav"> {/* Changed classname to className */}
                 {menu.map((list, index) => (
-                  <li className="nav-item" key={index}>
-                    <a className="nav-link" href={list.link}>
+                  <li className="nav-item" key={index}> {/* Changed class to className */}
+                    <a className="nav-link" href={list.link}> {/* Changed classname to className */}
                       {list.name}
                     </a>
                   </li>
